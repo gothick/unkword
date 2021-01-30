@@ -72,8 +72,6 @@ outfile_name = os.path.abspath(args.text)
 # writing this to use once...
 transform = ET.XSLT(ET.ElementTree(ET.fromstring(xsl)))
 
-# with zipfile.ZipFile(infile_name, 'r') as infile:
-# xmldata = ET.ElementTree(ET.fromstring(infile.read('maindoc.xml')))
 infile = None
 try:
     infile = tarfile.open(infile_name, "r:gz")
